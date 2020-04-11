@@ -27,7 +27,17 @@ print('一共有',len(new),'筆留言長度小於100')
 print(new[0])
 print(new[1])
 
+good = []
+for review in data :
+	if 'good' in review :
+		good.append(review)
+print('一共有',len(good),'留言有good')
+print(good[5])
 
+
+#list comprehension
+good = [review for review in data if 'good' in review]
+print(len(good))
 
 
 
