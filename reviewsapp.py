@@ -18,3 +18,16 @@ for word in data :
 
 print('每筆留言平均數是：' ,sum_len / len(data))
 
+
+new = []
+for reviews in data :
+	if len(reviews) < 100 :
+		new.append(reviews)
+print('一共有',len(new),'筆留言長度小於100')
+print(new[0])
+print(new[1])
+
+
+
+
+
