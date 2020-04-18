@@ -40,4 +40,31 @@ good = [review for review in data if 'good' in review]
 print(len(good))
 
 
+#文字計數
+wc = {}
+for d in data :
+	words = d.split(' ')
+	for word in words:
+		if word in wc :
+			wc[word] += 1
+		else:
+			wc[word] = 1
+
+for word in wc:
+	if wc[word] > 1000000:
+		print(word,wc[word])
+
+print(len(wc))
+print(wc['Hugo'])
+
+while True:
+	word = input('你想查什麼字： ')	
+	if word == 'q':
+		break	
+	if word in wc:
+		print(word,'這個字出現過' ,wc[word],'次')
+	else:
+		print('這個字沒有出現過～')
+print('感謝使用')
+
 
